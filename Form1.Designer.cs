@@ -48,7 +48,8 @@
             // SliderGrado
             // 
             this.SliderGrado.Location = new System.Drawing.Point(301, 333);
-            this.SliderGrado.Maximum = 360;
+            this.SliderGrado.Maximum = 90;
+            this.SliderGrado.Minimum = -90;
             this.SliderGrado.Name = "SliderGrado";
             this.SliderGrado.Size = new System.Drawing.Size(487, 45);
             this.SliderGrado.TabIndex = 0;
