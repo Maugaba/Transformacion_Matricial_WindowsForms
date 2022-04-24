@@ -19,8 +19,8 @@ namespace Transformacion_Matricial_WindowsForms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             exponencial();
+            cruzPrincipal();
         }
 
         private void SliderX_Scroll(object sender, EventArgs e)
@@ -111,19 +111,19 @@ namespace Transformacion_Matricial_WindowsForms
             double[] MatrizTraslacionRotacion = {Math.Cos((SliderGrado.Value * Math.PI / 180)), -Math.Sin((SliderGrado.Value * Math.PI / 180)), SliderX.Value* Math.Cos((SliderGrado.Value * Math.PI / 180)) - SliderY.Value * Math.Sin((SliderGrado.Value * Math.PI / 180)),
                                                 Math.Sin((SliderGrado.Value* Math.PI / 180)), Math.Cos((SliderGrado.Value* Math.PI / 180)), SliderY.Value* Math.Cos((SliderGrado.Value* Math.PI / 180)) + SliderX.Value * Math.Sin((SliderGrado.Value* Math.PI / 180)),
                                                 0,0,1};
-            double[,] matriz_grafica = new double[99, 2];
-            double[,] matriz_resultado = new double[99, 1];
-            double punto1 = -4;
+            double[,] matriz_grafica = new double[100, 3];
+            double[,] matriz_resultado = new double[100, 2];
+            double punto1 = -5.5;
             double punto2 = 0.00033;
-            for(int i = 0; i < 99; i++)
+            for (int i = 0; i < 20; i++)
             {
-                MessageBox.Show(i + "");
                 matriz_grafica[i, 0] = punto1;
                 matriz_grafica[i, 1] = punto2;
                 matriz_grafica[i, 2] = 1;
-                punto1 = punto1 * 2;
-                punto2 = punto2 + 0.1;
+                punto1 = punto1 + 0.5;
+                punto2 = punto2 * 2.1;
             }
+
             /*double[] vector1 = { -2, 0, 1 };
             double[] vector2 = { 0, 1, 1 };
             double[] vector3 = { 2, 100, 1 };
@@ -131,10 +131,11 @@ namespace Transformacion_Matricial_WindowsForms
                 double[] vector5 = { MatrizTraslacionRotacion[0] * vector2[0] + MatrizTraslacionRotacion[1] * vector2[1] + MatrizTraslacionRotacion[2] * vector2[2], MatrizTraslacionRotacion[3] * vector2[0] + MatrizTraslacionRotacion[4] * vector2[1] + MatrizTraslacionRotacion[5] * vector2[2] };
                 double[] vector6 = { MatrizTraslacionRotacion[0] * vector3[0] + MatrizTraslacionRotacion[1] * vector3[1] + MatrizTraslacionRotacion[2] * vector3[2], MatrizTraslacionRotacion[3] * vector3[0] + MatrizTraslacionRotacion[4] * vector3[1] + MatrizTraslacionRotacion[5] * vector3[2] };*/
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 20; i++)
             {
                 matriz_resultado[i, 0] = MatrizTraslacionRotacion[0] * matriz_grafica[i, 0] + MatrizTraslacionRotacion[1] * matriz_grafica[i, 1] + MatrizTraslacionRotacion[2] * matriz_grafica[i, 2];
                 matriz_resultado[i, 1] = MatrizTraslacionRotacion[3] * matriz_grafica[i, 0] + MatrizTraslacionRotacion[4] * matriz_grafica[i, 1] + MatrizTraslacionRotacion[5] * matriz_grafica[i, 2];
+
             }
 
             Graphics grafica = this.CreateGraphics();
@@ -143,8 +144,9 @@ namespace Transformacion_Matricial_WindowsForms
             Pen lapiz = new Pen(Brushes.Red, 4);
             float desfaseX = Width / 2;
             float desfaseY = (Height / 2);
-            for(int i = 0; i < 99; i++)
+            for(int i = 0; i < 19; i++)
             {
+                
                 grafica.DrawLine(lapiz, 10 * (float)matriz_resultado[i, 0] + desfaseX, 10 * (float)matriz_resultado[i, 1] * -1 + desfaseY, 10 * (float)matriz_resultado[i+1, 0] + desfaseX, 10 * (float)matriz_resultado[i+1, 1] * -1 + desfaseY);
             }
         }
