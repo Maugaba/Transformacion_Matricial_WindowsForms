@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
 
 namespace Transformacion_Matricial_WindowsForms
 {
@@ -15,6 +16,9 @@ namespace Transformacion_Matricial_WindowsForms
         public Inicio()
         {
             InitializeComponent();
+            double largo = SystemParameters.FullPrimaryScreenHeight;
+            double ancho = SystemParameters.FullPrimaryScreenWidth;
+            this.Size = new Size(Convert.ToInt32(ancho), Convert.ToInt32(largo));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +37,11 @@ namespace Transformacion_Matricial_WindowsForms
         {
             Polinomial polinomial = new Polinomial();
             polinomial.Show();
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

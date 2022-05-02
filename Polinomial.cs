@@ -19,6 +19,7 @@ namespace Transformacion_Matricial_WindowsForms
 
         private void Polinomial_Load(object sender, EventArgs e)
         {
+        
         }
         void cruzPrincipal()
         {
