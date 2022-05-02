@@ -45,30 +45,30 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1510, 882);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(248, 47);
+            this.label6.Size = new System.Drawing.Size(182, 34);
             this.label6.TabIndex = 17;
             this.label6.Text = "Slider Posicion Grados";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(1639, 776);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 47);
+            this.label5.Size = new System.Drawing.Size(141, 34);
             this.label5.TabIndex = 16;
             this.label5.Text = "Slider Posicion Y";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Javanese Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(1405, 776);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(193, 47);
+            this.label4.Size = new System.Drawing.Size(141, 34);
             this.label4.TabIndex = 15;
             this.label4.Text = "Slider Posicion X";
             // 

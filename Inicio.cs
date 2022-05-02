@@ -16,9 +16,7 @@ namespace Transformacion_Matricial_WindowsForms
         public Inicio()
         {
             InitializeComponent();
-            double largo = SystemParameters.FullPrimaryScreenHeight;
-            double ancho = SystemParameters.FullPrimaryScreenWidth;
-            this.Size = new Size(Convert.ToInt32(ancho), Convert.ToInt32(largo));
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +39,9 @@ namespace Transformacion_Matricial_WindowsForms
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-
+            double largo = SystemParameters.FullPrimaryScreenHeight;
+            double ancho = SystemParameters.FullPrimaryScreenWidth;
+            this.Size = new Size(Convert.ToInt32(ancho), Convert.ToInt32(largo));
         }
     }
 }
